@@ -14,7 +14,7 @@
 \setboolean{prof}{true}
 
 \usepackage[%
-    pdftitle={CI5 SED - },
+    pdftitle={CI5 SED - Systèmes Logiques},
     pdfauthor={Xavier Pessoles},
     colorlinks=true,
     linkcolor=blue,
@@ -27,16 +27,16 @@ CI 5 : Étude du comportement des systèmes numériques}{
 Chapitre  -- }}
 
 \def\xxsoustitre{\ifthenelse{\boolean{xp}}{
-Chapitre 1 -- Étude des systèmes combinatoires}{
+Chapitre 1 -- Étude des systèmes logiques (appelés aussi combinatoires)}{
 Partie  -- }}
 
 \def\xxauteur{\ifthenelse{\boolean{xp}}{
-Xavier \textsc{Pessoles}}{
+Xavier \textsc{Pessoles} \\ 2013 -- 2014}{
 }}
 
 \def\xxpied{\ifthenelse{\boolean{xp}}{
 CI 5 : Étude du comportement des systèmes numériques -- Cours\\
-Chapitre 1 -- Étude des systèmes combinatoires}{
+Chapitre 1 -- Étude des systèmes logiques}{
 \xxtitre}}
 
 \def\xxcathegorie{\ifthenelse{\boolean{xp}}{
@@ -55,7 +55,34 @@ Xavier \textsc{Pessoles}}{}}
 \ifthenelse{\boolean{xp}}{\input{style/enteteXP}}{\input{style/enteteDI}}
 
 
+\begin{minipage}[c]{.2\linewidth}
+\begin{center}
+\includegraphics[width=.7\textwidth]{images/digicode}
 
+\textit{Digicode}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.2\linewidth}
+\begin{center}
+\includegraphics[width=.8\textwidth]{images/transistor_ttl_nand}
+
+\textit{Transistor TTL (permettant de réaliser des opérations logiques) }
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.2\linewidth}
+\begin{center}
+\includegraphics[width=.8\textwidth]{images/inductif}
+
+\textit{Détecteur inductif}
+\end{center}
+\end{minipage}\hfill
+\begin{minipage}[c]{.2\linewidth}
+\begin{center}
+\includegraphics[width=\textwidth]{images/capteur_contact}
+
+\textit{Détecteur à contact}
+\end{center}
+\end{minipage}
 
 Un des objectifs de l'automaticien est de concevoir la partie commande qui traite les informations et élabore les ordres. Ce cours étudie le cas où les informations et les ordres élaborés sont des variables binaires.
 
@@ -497,10 +524,7 @@ $$ a+b = b+a$$
 \begin{minipage}[c]{.45\linewidth}
 $$ a\cdot b = b\cdot a$$
 \end{minipage}
-\end{prop}
 
-
-\begin{prop}
 \textbf{Distributivité}
 
 \begin{minipage}[c]{.45\linewidth}
@@ -509,9 +533,7 @@ $$ a\cdot (b+c) = a\cdot b+a \cdot c$$
 \begin{minipage}[c]{.45\linewidth}
 $$ a+(b\cdot c) = (a+b) \cdot (a+c)$$
 \end{minipage}
-\end{prop}
 
-\begin{prop}
 \textbf{Associativité}
 
 \begin{minipage}[c]{.45\linewidth}
@@ -520,9 +542,7 @@ $$ a + (b+c) = (a+b)+c = a+b+c$$
 \begin{minipage}[c]{.45\linewidth}
 $$ a \cdot (b\cdot c) = (a\cdot b)\cdot c = a \cdot b\cdot c$$
 \end{minipage}
-\end{prop}
 
-\begin{prop}
 \textbf{Élément neutre}
 
 \begin{minipage}[c]{.45\linewidth}
@@ -531,9 +551,7 @@ $$ a + 0 = a$$
 \begin{minipage}[c]{.45\linewidth}
 $$ a\cdot 1 = a$$
 \end{minipage}
-\end{prop}
 
-\begin{prop}
 \textbf{Élément absorbant}
 
 \begin{minipage}[c]{.45\linewidth}
@@ -542,11 +560,7 @@ $$ a + 1 = 1$$
 \begin{minipage}[c]{.45\linewidth}
 $$ a\cdot 0 = 0$$
 \end{minipage}
-\end{prop}
 
-
-
-\begin{prop}
 \textbf{Complémentarité}
 
 \begin{minipage}[c]{.45\linewidth}
@@ -557,11 +571,7 @@ $$ a\cdot \overline{a} = 0$$
 \end{minipage}
 
 Par ailleurs $\overline{\overline{a}}=a$.
-\end{prop}
 
-
-
-\begin{prop}
 \textbf{Idem potence}
 
 \begin{minipage}[c]{.45\linewidth}
@@ -570,10 +580,7 @@ $$ a + a = a$$
 \begin{minipage}[c]{.45\linewidth}
 $$ a\cdot a = a$$
 \end{minipage}
-\end{prop}
 
-
-\begin{prop}
 \textbf{Identités remarquables}
 
 Absorption : 
@@ -589,9 +596,7 @@ $$
 \begin{theo}
 $$
 \overline{\sum\limits_{i=1}^{n} a_i} = \prod\limits_{i=1}^n \overline{a_i}
-$$
-
-$$
+\quad
 \overline{\prod\limits_{i=1}^{n} a_i} = \sum\limits_{i=1}^n \overline{a_i}
 $$
 \end{theo}
