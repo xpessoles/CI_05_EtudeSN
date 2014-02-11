@@ -13,6 +13,10 @@
 \newboolean{prof}
 \setboolean{prof}{true}
 
+\newboolean{td}
+\setboolean{td}{true}
+
+
 \usepackage[%
     pdftitle={CI5 SED - Systèmes Logiques},
     pdfauthor={Xavier Pessoles},
@@ -54,7 +58,9 @@ Xavier \textsc{Pessoles}}{}}
 
 \ifthenelse{\boolean{xp}}{\input{style/enteteXP}}{\input{style/enteteDI}}
 
-
+\begin{center}
+\large{\textsc{Travaux Dirigés}}
+\end{center}
 
 \vspace{.5cm}
 \begin{flushright}
@@ -62,10 +68,10 @@ Xavier \textsc{Pessoles}}{}}
 \end{flushright}
 %\begin{center}
 %\begin{tabular}{cccc}
-%\includegraphics[height=2.5cm]{png/acier} &
-%\includegraphics[height=2.5cm]{png/bois} &
-%\includegraphics[height=2.5cm]{png/composite} &
-%\includegraphics[height=2.5cm]{png/verre}\\
+%\includegraphics[height=2.5cm]{images/acier} &
+%\includegraphics[height=2.5cm]{images/bois} &
+%\includegraphics[height=2.5cm]{images/composite} &
+%\includegraphics[height=2.5cm]{images/verre}\\
 %\textit{Acier \cite{acier}} & 
 %\textit{Bois} & 
 %\textit{Fibre de carbone \cite{composite}} & 
@@ -75,25 +81,28 @@ Xavier \textsc{Pessoles}}{}}
 
 
 
-\subsection*{Coffre fort de banque}
+\paragraph*{Coffre fort de banque}
 
 \setcounter{subparagraph}{0}
 
+
+On s'intéresse à un coffre fort de banque dont on donne le principe de fonctionnement.
+
+\vspace{.25cm} 
+
 \begin{minipage}[c]{.45\linewidth}
-
-On s'intéresse à un coffre fort de banque dont on donne le principe de fonctionnement ainsi qu'un extrait de cahier des charges ci-dessous.
-
+\begin{center}
+\includegraphics[width=\textwidth]{images/acces}
+\end{center}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{.45\linewidth}
 \begin{center}
-\includegraphics[width=.9\textwidth]{png/fig3}
+\includegraphics[width=.9\textwidth]{images/fig3}
 \end{center}
 \end{minipage}
 
-\begin{center}
-\includegraphics[width=.9\textwidth]{png/fig4}
-\end{center}
+\vspace{.25cm} 
 
 \subsection*{Extrait du cahier des charges}
 \begin{itemize}
@@ -101,6 +110,10 @@ On s'intéresse à un coffre fort de banque dont on donne le principe de fonctio
 \item Le responsable $A$ ne peut ouvrir le coffre qu'avec le responsable $B$ ou $C$.
 \item Les responsables $B$, $C$ et $D$ ne peuvent ouvrir le coffre qu'en présence d'au moins deux des autres responsables.
 \end{itemize}
+
+\subparagraph{}
+\textit{Donner le schéma des entrées -- sorties.}
+
 
 \subparagraph{}
 \textit{Construire la table de vérité contenant les entrées $a$, $b$, $c$ et $d$ ainsi que la sortie $S$ ($S=1$ : coffre ouvert $S=0$ coffre fermé) permettant de décrire le fonctionnement du système.}
@@ -126,22 +139,21 @@ On s'intéresse à un coffre fort de banque dont on donne le principe de fonctio
 \begin{minipage}[c]{.45\linewidth}
 Afin d'assurer la sécurité et de contrôler le nombre de personnes qui rentrent dans un ambassade, on oblige ces personnes à emprunter un escalier mécanique avec contrôle d'accès qui mène à l'étage où se situent les bureaux.
 
-On s'intéresse au fonctionnement logique du système dont on donne le schéma de principe ainsi qu'un extrait du cahier des charges fonctionnel.
+On s'intéresse au fonctionnement logique de ce système.
+% dont on donne le schéma de principe ainsi qu'un extrait du cahier des charges fonctionnel.
 
 
 \end{minipage}
 \hfill
 \begin{minipage}[c]{.45\linewidth}
 \begin{center}
-\includegraphics[width=.9\textwidth]{png/fig1}
+\includegraphics[width=.9\textwidth]{images/fig1}
 \end{center}
 \end{minipage}
 
-\begin{center}
-\includegraphics[width=.9\textwidth]{png/fig2}
-\end{center}
 
 \subsubsection*{Extrait du cahier des charges}
+\setcounter{subparagraph}{0}
 \begin{itemize}
 \item Lorsqu'une personne franchi le portillon, elle pose un pied sur le tapis sensible bas ($T_b$) placé en bas de l'escalier. Aussitôt l'escalier se met en marche ($M$).
 \item Dès que la personne pose un pied sur l'escalier, tout en gardant l'autre sur le tapis sensible, sa présence est détectée par un capteur de présence ($c$). Dès que ce capteur ($c$) est activé, un verrou ($V$) bloque le portillon et l'escalier continue de marcher ($M$).
@@ -175,7 +187,7 @@ On s'intéresse à une intersection entre une route principale et une route seco
 
 
 \begin{center}
-\includegraphics[width=.9\textwidth]{png/fig5}
+\includegraphics[width=.9\textwidth]{images/fig5}
 \end{center}
 
 Des capteurs de présence de voitures sont placés le long des voies : $a$ et $b$ pour la route principale, $c$ et $d$ pour la route secondaire. Les sorties de ces capteurs sont à A en présence de voitures. 
