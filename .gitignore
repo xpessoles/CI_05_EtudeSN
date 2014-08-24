@@ -1,9 +1,0 @@
-#################
-## LaTeX
-#################
-*.aux
-*.toc
-*.out
-*.log
-*.synctex.gz
-03_Reseaux/*
